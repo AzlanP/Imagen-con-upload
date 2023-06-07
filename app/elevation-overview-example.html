@@ -1,0 +1,54 @@
+<!-- 
+<div class="col-md-12 background-preview" matTooltip="previsualización" matTooltipPosition="above">
+<div class="image-container">
+<div
+class="col-md-12 background-preview"></div>
+  <div class="overlay">
+    <div class="button-group">
+      <button mat-icon-button class="upload-button" (click)="inputFileImageBackground.click()">
+        <mat-icon>file_upload</mat-icon>
+      </button>
+      <button mat-icon-button class="clear-button" color="primary" (click)="clearBackgroundImage(item)">
+        <mat-icon>clear</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
+</div>
+<div style="visibility: hidden; height: 0px; width: 0px">
+<input type="file" accept="image/*" #inputFileImageBackground (change)="onFileChange($event, item)" />
+</div> -->
+<div class="col-md-12 background-preview">
+  <div class="overlay">
+    <div class="button-group">
+      <button
+        mat-icon-button
+        class="upload-button"
+        (click)="inputFileImageBackground.click()"
+        matTooltip="Subir Imagen"
+      >
+        <mat-icon>file_upload</mat-icon>
+      </button>
+      <button
+        mat-icon-button
+        class="clear-button"
+        matTooltip="Restablecer Imagen por defecto"
+        color="primary"
+        (click)="clearBackgroundImage(item)"
+      >
+        <mat-icon>autorenew</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
+<div style="visibility: hidden; height: 0px; width: 0px">
+  <input
+    type="file"
+    accept="image/*"
+    #inputFileImageBackground
+    (change)="onFileChange($event, item)"
+  />
+</div>
+
+RELLENO DEL ICONO BORDE SOLIDO (OPCIONAL) TAMAÑO DE LA IMAGEN (background:
+url(./assets/img/loginbg2.jpg) center center / auto no-repeat;)
